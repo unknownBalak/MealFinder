@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  background-color: #282828;
+}
+h2 {
+  text-align: center;
+}
+.border {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.search__box {
+  outline: none;
+  padding: 5px;
+  margin: 10px 10px;
+  border: 2px solid green;
+}
+.meals div {
+  border: 2px solid white;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  background: rgba(255, 255, 0, 0.349);
+  cursor: pointer;
+}
+.meals div img:hover {
+  webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+  filter: blur(4px);
+}
+.meals div img {
+  height: 100%;
+  width: 100%;
+}
+.meals {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin: 20px 0;
+}
