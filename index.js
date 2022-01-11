@@ -16,7 +16,10 @@ const searchFood = async function () {
   result = output
     .map(
       (item) =>
-        `<div><img src=${item?.strMealThumb} alt=${item?.strMeal} /></div>`
+        `<div class="meal__box" >
+        <img src=${item?.strMealThumb} alt=${item?.strMeal} />
+              <div class="meal__name"> <h3> ${item?.strMeal} </h3> </div>
+        </div>`
     )
     .join("");
   meals.innerHTML = result;

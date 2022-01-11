@@ -23,19 +23,15 @@ h2 {
   margin: 10px 10px;
   border: 2px solid green;
 }
-.meals div {
+.meals .meal__box {
   border: 2px solid white;
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   overflow: hidden;
   background: rgba(255, 255, 0, 0.349);
   cursor: pointer;
 }
-.meals div img:hover {
-  webkit-filter: blur(4px); /* Chrome, Safari, Opera */
-  filter: blur(4px);
-}
-.meals div img {
+.meals .meal__box img {
   height: 100%;
   width: 100%;
 }
@@ -45,4 +41,21 @@ h2 {
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 10px;
   margin: 20px 0;
+}
+.meal__box {
+  position: relative;
+}
+.meal__name {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  background-color: #282828bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.meal__box:hover .meal__name {
+  opacity: 1;
 }
